@@ -1,0 +1,17 @@
+<form role="form" #form="form" (ng-submit)="submit(form.value)">
+    {{diagnostic}}
+    <fieldset>
+        <legend>Create Account</legend>
+        
+        <label><strong>Email:</strong></label>
+        <input name="Email" [(ng-model)]="user.email" required type="email" placeholder="Enter your email address" />
+        
+        <label><strong>Password:</strong></label>
+        <input name="password" [(ng-model)]="user.password" required type="password" />
+        
+        <div>
+            <button type="submit">Create</button>
+            <button>Cancel</button>
+        </div>
+    </fieldset>
+</form>
